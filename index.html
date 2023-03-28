@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stronger Vôlei</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header>
+    <h2 class="headline">Descubra os segredos para um ataque <span>poderoso</span> no vôlei e deixe seus adversários no chinelo!</h2>
+    <h3 class="sub-headline">Aprenda técnicas validadas, desenvolvidas especificamente para aumentar a sua potência no ataque!</h3>
+  </header>
+  
+  <main>
+    <div class="video-container">
+      <video src="05 - VSL.mp4" controls></video>
+    </div>
+      <button class="bottom-cta hidden">Acessar Ebook</button>
+      <br><br><br><br>
+    </main>
+
+    <style>
+
+.video-wrapper {
+    position: relative;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  .play-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #333;
+    margin-left: 4.5px;
+  }
+
+      /* Esconde a barra de reprodução */
+      video::-webkit-media-controls-timeline {
+        display: none !important;
+      }
+
+      /* Esconde a duração do vídeo */
+      video::-webkit-media-controls-time-remaining-display,
+      video::-webkit-media-controls-current-time-display {
+        display: none !important;
+      }
+            
+      /* Esconde a opção de pular o tempo */
+      video::-webkit-media-controls-skip-back-button,
+      video::-webkit-media-controls-skip-forward-button {
+        display: none !important;
+      }
+    </style>
+
+<script>
+  var playButton = document.querySelector(".play-button");
+  
+  playButton.addEventListener("click", function() {
+    if (video.paused) {
+      video.play();
+      playButton.style.display = "none";
+    } else {
+      video.pause();
+      playButton.style.display = "block";
+    }
+  });
+</script>
+  
+  <footer>
+    <p>&copy; Stronger Vôlei 2023. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px;
+    background-color: #292929;
+  }
+  
+  .headline {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .sub-headline {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: darkgray;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 50px;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    margin-bottom: 40px;
+  }
+  span{
+    color: #FB9224;
+  }
+  
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bottom-cta {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-color: #FB9224;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    border: 5px;
+    border-radius: 18px;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* transição suave */
+    border: 1px solid #FB9224;
+  }
+  .bottom-cta:hover{
+    background-color: #FB9224;
+    color: #000000;
+    animation: animacaoBotao 0.5s; /* duração da animação */
+    padding: 10px 40px;
+    border: 3px solid #FB9224;
+  }
+
+  .bottom-cta.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #292929;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #818181;
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    .headline {
+      font-size: 24px;
+    }
+    
+    .sub-headline {
+      font-size: 18px;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    .video-container {
+      margin-bottom: 20px;
+    }
+    
+    .bottom-cta {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+    
+    footer p {
+      font-size: 12px;
+    }
+  }
